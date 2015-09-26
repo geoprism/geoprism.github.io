@@ -1,0 +1,54 @@
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,200,800);
+body {
+    margin: 0;
+
+}
+#cover {
+	width: 100%;
+	height: 600px;
+	background: url(city.jpg);
+    background-size: cover;
+	margin-bottom: 10px;
+}
+
+#name {
+    margin: 0;
+    position: relative;
+    top: 210px;
+    font-weight: 300;
+    text-align: center;
+	font-size: 90px;
+	font-family: Raleway, sans-serif;
+	color: white;
+    text-shadow: 5px 5px 5px black;
+}
+
+#bar {
+    display:block;
+	float:right;
+	margin-right: 5px;
+	padding-top: 5px;
+	font-size: 18px;
+    font-weight: 200;
+	font-family: Raleway, sans-serif;
+    position: absolute;
+    top: 0;
+    right: 5px;
+	color: white;
+}
+
+#bar li {
+    display:inline;
+    padding: 7px;
+}
+
+#bar li a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px black;
+}
+#bar li a:hover {
+    color: darkgray;
+    /*text-decoration: underline;*/
+}
