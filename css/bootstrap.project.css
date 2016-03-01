@@ -1084,7 +1084,7 @@ html {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.1;
+  /*line-height: 1.42857143;*/
   color: #333;
   background-color: #fff;
 }
@@ -1129,6 +1129,15 @@ img {
   height: auto;
 
 
+}
+
+.proj-logo{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 100px;
+
+    border-radius: 100%;
 }
 .img-rounded {
   border-radius: 6px;
@@ -1252,7 +1261,7 @@ h5,
 h6,
 .h6 {
   margin-top: 1px;
-  margin-bottom: 1px;
+  margin-bottom: 7px;
 }
 h4 small,
 .h4 small,
@@ -1420,8 +1429,9 @@ a.bg-danger:focus {
 }
 ul,
 ol {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+
 }
 ul ul,
 ol ul,
