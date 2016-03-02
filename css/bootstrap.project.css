@@ -1135,10 +1135,14 @@ img {
     width: 100px;
     height: 100px;
     float: left;
-    margin-right: 100px;
+    margin-right: 40px;
 
     border-radius: 100%;
 }
+.wrapper{
+    display: flex;
+}
+
 .img-rounded {
   border-radius: 6px;
 }
@@ -1429,8 +1433,8 @@ a.bg-danger:focus {
 }
 ul,
 ol {
-  margin-top: 25px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 
 }
 ul ul,
