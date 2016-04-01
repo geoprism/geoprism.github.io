@@ -94,17 +94,116 @@
                     <h2 class="section-heading">RottenTomatoes API</h2>
                     <p class="post-meta">21 MAR 2015</p>
 
-                    <p>UNDER CONSTRUCTION!!!  This some dope API stuff dawg
-                    </tfoot></p>
+                    <p>This one of my favorite projects as I find myself constantly
+                        wanting to watch a new movie but too lazy to look for a
+                        movie with good reviews. So instead I wrote a program that
+                        filtered the good movies for me!
+                        <br><br>
 
+                        Ths project has four main features:
+                        <ol><ol >
+                            <li>Movie Search</li>
+                            <li>Display top 10 most popular current rentals.</li>
+                            <li>Display movies with a minimum review score and minimum amount of reviews.</li>
+                            <li>Display movies with a minumimim review score.
+                                (takes the average of the critic and audience score)</li>
+                        </ol></ol>
+                    </p>
+                    <br>
+                    <hr>
+                    <h1>1.) Movie Search</h1>
+                    <p>Pretty self explantary, build the url, parse the JSON result, print desired data.</p>
+<pre><code>def movie_search() -> None:
+    """
+    1.) Search movie: returns movie title, critic score, audience score
+    """
+    while True:
+        movie = input('Movie: ')
+        url = movie_api.build_url(movie,3,movie_search_url)
+        json_result = movie_api.json_response(url)
+        print()
+        if json_result['total'] != 0:
+            for movie in json_result['movies']:
 
-                    <!-- <center><a href="img/laferrari.jpg"><img src="img/laferrari.jpg" align="middle" height ="400px"></a></center>
-                    <span class="caption text-muted">2016 Ferrari LaFerrari</span> -->
+                print('{} ({})'.format(movie['title'],movie['year']))
+                print('Critics Rating: {}'.format(_ratings(movie['ratings']['critics_score'])))
+                print('Audience Rating: {}%'.format(movie['ratings']['audience_score']))
+                print()
+            break
+
+        print('Sorry, no results for "{}", try again'.format(movie))
+        print()</code></pre>
+
+                <br>
+                <center>
+                    <a href="img/movie_search.png" target="_blank"><img src="img/movie_search.png" align="middle" width="700px" ></a>
+                    <span class="caption text-muted">Example run</span>
+                    <br>
+                    <a href="img/starwars.png" target="_blank"><img src="img/starwars.png" align="middle" width="700px" ></a>
+                    <span class="caption text-muted">Screenshot from RottenTomatoes Website</span>
+                </center>
+                <hr>
+
+                <h1>2.) Display top 10 most popular current rentals.</h1>
+                <p>This one was bit harder to write. You had to take time and look
+                at the documetaion from the RottenTomatoes API to gather the right keys
+                in order to display the top 10 rentals.</p>
+
+            <br>
+            <center>
+                <a href="img/top_rentals.png" target="_blank"><img src="img/top_rentals.png" align="middle" width="700px" ></a>
+                <span class="caption text-muted">Example run</span>
+                <br>
+
+            </center>
+            <hr>
+
+            <h1>3 & 4.) Display movies with a minimum review score and minimum amount of reviews.</h1>
+            <p>Generate my own algorithm to take the average of the critic review and audience review
+            and weight that average by the number of  reviews made. I considered these movies to be a
+            failsafe to a guaranteed "good" movie.</p>
+<pre><code>def golden_movies()->None:
+    """
+    prints golden movies from top rentals
+    """
+    url = movie_api.top_rental_build_url('',50,top_rentals)
+    json_result = movie_api.json_response(url)
+    print("GOLDEN AKA PREMIUM MOVIES")
+    print("-------------------------")
+    print()
+    baseline_reviews = input('Miniumum number of reviews: ')
+    baseline_score = input('Baseline score for a golden movie: ')
+    print()
+    movies = []
+    try:
+        for movie in json_result['movies']:
+            movie_id = movie['id']
+            review_url = movie_api.golden_rental_url(movie_id)
+            json_review = movie_api.json_response(review_url)
+            if json_review['total']>int(baseline_reviews) and (((movie['ratings']['critics_score'])+
+                                              (movie['ratings']['critics_score']))/2)>int(baseline_score):
+
+                #movies.append(movie['title'])
+                print(movie['title'])
+    except:
+        print('')</pre></code>
+
+        <br>
+        <center>
+            <a href="img/goldmovies.png" target="_blank"><img src="img/goldmovies.png" align="middle" width="700px" ></a>
+            <span class="caption text-muted">Example run (NOTICE: all high rated movies)</span>
+            <br>
+
+        </center>
+
             </div>
         </div>
     </article>
-
     <hr>
+
+
+
+
 
     <!-- Footer -->
     <footer>

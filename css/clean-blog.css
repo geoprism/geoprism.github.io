@@ -8,6 +8,17 @@
      margin: 0;
  }
 
+ pre code {
+    display: block;
+    background: #2d2d2d;
+    color: #ccc;
+    padding: .5em;
+}
+
+ol ol{
+    margin-top: -10px;
+}
+
 body {
   font-family: Raleway,'Lora', 'Times New Roman', serif;
   font-size: 17px;
