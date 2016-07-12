@@ -127,6 +127,20 @@ p {
     background: white;
 }
 
+#text {
+  /*position: absolute;*/
+  background: white;
+  color: black;
+
+  top: 50%;
+  padding: 10px;
+
+  margin: auto;
+  /*border: 1px solid red;*/
+  width: 80%;
+  text-align: left;
+
+}
 
 @media only screen and (max-width: 1000px) {
   h1 {

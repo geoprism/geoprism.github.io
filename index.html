@@ -11,8 +11,8 @@
   <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
   <script type='text/javascript' src='js/jquery.particleground.js'></script>
 
-
-
+  <link rel="stylesheet" href="css/animsition.min.css">
+  <script src="js/animsition.min.js"></script>
 
   <script src="./js/chaffle.min.js"></script>
   <script type='text/javascript'>
@@ -28,9 +28,34 @@
 
   $(document).ready(function() {
   $('.chaffle').chaffle({
-    speed: 20,
-    time: 140
+    speed: 40,
+    time: 60
   });
+
+
+  $(".animsition").animsition({
+      inClass: 'fade-in-up-sm',
+      outClass: 'fade-out-up-sm',
+      inDuration: 1500,
+      outDuration: 800,
+      linkElement: '.btn',
+      // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+      loading: true,
+      loadingParentElement: 'body', //animsition wrapper element
+      loadingClass: 'animsition-loading',
+      loadingInner: '', // e.g '<img src="loading.svg" />'
+      timeout: false,
+      timeoutCountdown: 5000,
+      onLoadEvent: true,
+      browser: [ 'animation-duration', '-webkit-animation-duration'],
+      // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+      // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+      overlay : false,
+      overlayClass : 'animsition-overlay-slide',
+      overlayParentElement : 'body',
+      transition: function(url){ window.location.href = url; }
+    });
+
   });
   </script>
 
@@ -44,7 +69,7 @@
   ga('send', 'pageview');
 
   </script>
-  
+
 </head>
 
 <body>
@@ -52,17 +77,20 @@
 <div id="particles">
   <div id="intro">
     <h1>Brian Wong</h1>
-    <p class="chaffle" data-lang="ja-hiragana">こんにちは。你好。안녕。hi。</p>
-    <a href="https://www.linkedin.com/in/brian-m-wong" class="btn" target ="-_blank">LinkedIn</a>
-    <a href="https://github.com/geoprism" class="btn" target ="-_blank">GitHub</a>
-    <a href="projects.html" class="btn">Projects</a>
-    <a href="img/wong2016.pdf"  class="btn" target ="-_blank">Resume</a>
+    <!-- <p class="chaffle" data-lang="ja-hiragana">こんにちは。你好。안녕。hi。</p> -->
+    <p class="chaffle" data-lang="ja-hiragana">B.S. in Computer Science, UCI 2018</p>
+    <div class ="animsition">
+        <a href="https://www.linkedin.com/in/brian-m-wong" class="btn">LinkedIn</a>
+        <a href="https://github.com/geoprism" class="btn">GitHub</a>
+        <a href="projects.html" class="btn"
+            data-animsition-out-class="fade-out-right-sm"
+            data-animsition-out-duration="1500" >Projects</a>
+        <a href="img/wong2016.pdf"  class="btn">Resume</a>
+    </div>
   </div>
 </div>
 
-<section id="projects">
 
-</section>
 
 
 </body>

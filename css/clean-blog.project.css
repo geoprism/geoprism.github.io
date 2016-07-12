@@ -3,13 +3,15 @@
  * Copyright 2014 Start Bootstrap
  * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
  */
+ @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
  @import url(https://fonts.googleapis.com/css?family=Raleway:300,200,800);
+
  body {
      margin: 0;
  }
 
 body {
-  font-family: Raleway,'Lora', 'Times New Roman', serif;
+  font-family: Raleway, Montserrat,'Lora', 'Times New Roman', serif;
   font-size: 15px;
   color: #404040;
 }
@@ -25,12 +27,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Raleway,'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Montserrat,'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 200;
 }
 
 h2{
-    font-family: Raleway,'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Montserrat,'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 800;
 }
 
@@ -83,15 +85,15 @@ hr.small {
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
-    color: rgba(255, 255, 255, 0.8);
+    color: #463893;
   }
   .navbar-custom .nav li a {
     color: white;
-    padding: 20px;
+    padding: 15px 30px;
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
-    color: rgba(255, 255, 255, 0.8);
+    color: #463893;
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -123,14 +125,14 @@ hr.small {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #0085a1;
+    color: #463893;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #0085a1;
+    color: #463893;
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -338,30 +340,37 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
 .btn {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Montserrat, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #fff;
   text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  border-radius: 0;
-  padding: 15px 25px;
+  letter-spacing: 0.015em;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.4s;
+     -moz-transition: all 0.4s;
+       -o-transition: all 0.4s;
+          transition: all 0.4s;
+
 }
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
 }
-.btn-default:hover,
-.btn-default:focus {
-  background-color: #0085a1;
-  border: 1px solid #0085a1;
-  color: white;
+.btn:hover {
+  color: #463893;
+  border-color: #463893;
 }
 .pager {
   margin: 20px 0 0;
 }
 .pager li > a,
 .pager li > span {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Montserrat, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
