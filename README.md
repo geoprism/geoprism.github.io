@@ -1,2 +1,1 @@
-My Online Portfolio !
-Uses bootstrap, chaffle, particleground, and animisition
+My Online Portfolio!

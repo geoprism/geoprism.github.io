@@ -1,101 +1,301 @@
-<!doctype html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8" />
-  <title>Brian Wong</title>
-  <link rel="icon" href="img/b_logo.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" />
-  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  <!-- remember, jQuery is completely optional -->
-  <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
-  <script type='text/javascript' src='js/jquery.particleground.js'></script>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Brian Wong</title>
+        <meta name="description" content="">
+        <!--
+    	Volton Template
+    	http://www.templatemo.com/tm-441-volton
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/animsition.min.css">
-  <script src="js/animsition.min.js"></script>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <link rel="icon" href="img/uci_icon.jpg">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-  <script src="./js/chaffle.min.js"></script>
-  <script type='text/javascript'>
-  document.addEventListener('DOMContentLoaded', function () {
-    particleground(document.getElementById('particles'), {
-      dotColor: '#b3e0ff',
-      lineColor: '#b3e0ff'
-    });
-    var intro = document.getElementById('intro');
-    intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
-  }, false);
+        <div class="responsive-header visible-xs visible-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="top-section">
+                            <div class="profile-image">
+                                <img src="img/profilepic.jpg" alt="Volton">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-title">Brian Wong</h3>
+                                <p class="profile-description">UC Irvine BSCS Student</p>
+                                <div class="social-icons">
+                                    <ul>
+                                        <li><a href="https://www.linkedin.com/in/brian-m-wong/"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="https://github.com/geoprism"><i class="fa fa-github"></i></a></li>
+                                    </ul>
+                                </div> <!-- .social-icons -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+                <div class="main-navigation responsive-menu">
+                    <ul class="navigation">
+                        <li><a href="#top"><i class="fa fa-globe"></i>Home</a></li>
+                        <li><a href="#about"><i class="fa fa-pencil"></i>About Me</a></li>
+                        <li><a href="#edu"><i class="fa fa-graduation-cap fa-fw"></i>Education</a></li>
+                        <li><a href="#exp"><i class="fa fa-suitcase fa-fw"></i>Professional Experience</a></li>
+                        <li><a href="#proj"><i class="fa fa-book fa-fw"></i>Projects</a></li>
+                        <li><a href="#awards"><i class="fa fa-star fa-fw"></i>Awards</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <!-- SIDEBAR -->
+        <div class="sidebar-menu hidden-xs hidden-sm">
+            <div class="top-section">
+                <div class="profile-image">
+                    <img src="img/profilepic.jpg" alt="Volton">
+                </div>
+                <h3 class="profile-title">Brian Wong</h3>
+                <p class="profile-description">UC Irvine BSCS Student</p>
+            </div> <!-- top-section -->
+            <div class="social-icons">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/brian-m-wong/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/geoprism"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div> <!-- .social-icons -->
+            <div class="main-navigation">
+                <ul class="navigation">
+                    <li><a href="#top"><i class="fa fa-globe"></i>Home</a></li>
+                    <li><a href="#about"><i class="fa fa-pencil"></i>About Me</a></li>
+                    <li><a href="#edu"><i class="fa fa-graduation-cap fa-fw"></i>Education</a></li>
+                    <li><a href="#exp"><i class="fa fa-suitcase fa-fw"></i>Professional Experience</a></li>
+                    <li><a href="#proj"><i class="fa fa-book fa-fw"></i>Projects</a></li>
+                    <li><a href="#awards"><i class="fa fa-star fa-fw"></i>Awards</a></li>
+                </ul>
+            </div> <!-- .main-navigation -->
 
-  $(document).ready(function() {
-  $('.chaffle').chaffle({
-      speed: 30,
-      time: 130
-  });
-
-
-  $(".animsition").animsition({
-      inClass: 'fade-in-up-sm',
-      outClass: 'fade-out-up-sm',
-      inDuration: 1500,
-      outDuration: 800,
-      linkElement: '.btn',
-      // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-      loading: true,
-      loadingParentElement: 'body', //animsition wrapper element
-      loadingClass: 'animsition-loading',
-      loadingInner: '', // e.g '<img src="loading.svg" />'
-      timeout: false,
-      timeoutCountdown: 5000,
-      onLoadEvent: true,
-      browser: [ 'animation-duration', '-webkit-animation-duration'],
-      // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-      // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-      overlay : false,
-      overlayClass : 'animsition-overlay-slide',
-      overlayParentElement : 'body',
-      transition: function(url){ window.location.href = url; }
-    });
-
-  });
-  </script>
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-79374404-1', 'auto');
-  ga('send', 'pageview');
-
-  </script>
-
-</head>
-
-<body>
-
-<div id="particles">
-  <div id="intro">
-    <h1>Brian Wong</h1>
-    <p class="chaffle" data-lang="ja-hiragana">こんにちは。你好。안녕。hi。</p>
-    <!-- <p class="chaffle" data-lang="en">B.S. in Computer Science, UCI 2018</p> -->
-    <div class ="animsition">
-        <a href="https://www.linkedin.com/in/brian-m-wong" class="btn">LinkedIn</a>
-        <a href="https://github.com/geoprism" class="btn">GitHub</a>
-        <a href="projects.html" class="btn"
-            data-animsition-out-class="fade-out-down-sm"
-            data-animsition-out-duration="1500" >Projects</a>
-        <a href="img/wong2016.pdf"  class="btn">Resume</a>
-    </div>
-    <p style="position: fixed; bottom:0; margin-bottom:10px; left: 50%; width: 500px; margin-left: -250px; font-size:14px;">
-        Brian Wong &copy; 2016 All rights reserved.
-    </p>
-  </div>
-
-</div>
+        </div> <!-- .sidebar-menu -->
 
 
+        <div class="banner-bg" id="top">
+            <div class="banner-overlay"></div>
+            <div class="welcome-text">
+                <h2> $ Hello World!</h2>
+                <h5>"The master has failed more times than the beginner has even tried" - Stephen McCranie</h5>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <div class="fluid-container">
+
+                <div class="content-wrapper">
+
+                    <!-- ABOUT -->
+                    <div class="page-section" id="about">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">About Me</h4>
+                            <p>
+                                I am currently a third year, studying Computer Science at the University of California, Irvine.
+                                I am also minoring in Mathematics and Statistics with plans to further my education in Machine Learning/AI.
+                                I share a passion for solving with real world problems with performant software. Unraveling data-analytic problems, determining
+                                correct data sets/variables, and recognizing patterns with big data are all topics that interest me. <br/> <br/>
+                                When I'm not hacking, I like to play pick up basketball on campus or challenge my friends to an
+                                intense game of chess. I look forward to traveling someday and exploring what the rest of the world has to offer. <br/> <br/>
+
+                                Ask me who I think will be the NBA Champs this year: <span style ="font-size: 16px; font-style:bold; color:black;"> wongbm2 (at) uci (dot) edu </span>
+                            </p>
+                            <hr>
+                        </div>
+                    </div> <!-- #about -->
+                    </div>
+
+                    <!-- EDUCATION -->
+                    <div class="page-section" id="edu">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Education</h4>
+                            <ul>
+                                <li>
+                                    <div class="b-item">
+                                        <div class="b-item-img">
+                                            <img src="img/uci_icon.jpg">
+                                        </div>
+                                        <div class="b-item-content">
+                                            <h5><b><span class="blue-grey">September 2014 - Present</span></b></h5>
+                                            <h5 class="b-item-title"><b>University of California, Irvine</b></h5>
+                                            <h5>Computer Science - Bachelor of Science (BS)</h5>
+                                            <h5 class="extra-space-loc">Minor in Mathematics and Statistics</h5>
+                                            <h5 class="extra-space-loc">Irvine, CA - USA</h5>
+                                            <ul>
+                                               <li>Cumulative GPA: 3.9</li>
+                                               <li>Engineering Dean's Honor List every quarter since my enrollement at UCI.</li>
+                                           </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- <div class="li-sep"></div> -->
+                            </ul>
+                            <hr>
+                        </div>
+                    </div> <!-- #Education -->
+                    </div>
+
+                    <!-- EXPERIENCE -->
+                    <div class="page-section" id="exp">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Professional Experience</h4>
+                            <ul>
+                                <li>
+                                    <div class="b-item">
+                                        <div class="b-item-img">
+                                            <img src="img/boeing.jpg">
+                                        </div>
+                                        <div class="b-item-content">
+                                            <h5><b><span class="blue-grey">June 2017 - August 2017</span></b></h5>
+                                            <h5 class="b-item-title"><b>Software Engineering Intern - The Boeing Company (Incoming)</b></h5>
+                                            <h5>Pleasanton, CA - USA</h5>
+                                            <ul>
+                                                <li>Working with projects releated to Boeing Defense, Space & Security.</li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div class="li-sep"></div>
+                                <li>
+                                    <div class="b-item">
+                                        <div class="b-item-img">
+                                            <img src="img/pintag.jpg">
+                                        </div>
+                                        <div class="b-item-content">
+                                            <h5><b><span class="blue-grey">June 2016 - August 2016</span></b></h5>
+                                            <h5 class="b-item-title"><b>Full-Stack Developer, Software Architect - PinTag iOS Check-in App</b></h5>
+                                            <h5>Irvine, CA - USA</h5>
+                                            <ul>
+                                                <li>Utilized Apache Cordova framework to access gelocation, camera, and push notifications. </li>
+                                                <li>Worked extensively with JavaScript and JQuery to tackled scalability issues, jank, asynchronous functions, lazy loading </li>
+                                                <li>Configured development and distribution provisioning profiles for respective
+                                                    external beta testing via TestFlight and official distribution at launch. </li>
+                                                <li>Accessed Apple Development tools, such as APNS. Created certificates(.pem files) to gain access to appropriate dev tools.</li>
+                                                <li>Technologies Used: Meteor.js, Node.js, Blaze, MongoDB, Apache Cordova, XCode, APNS</li>
+                                                <li>API's Used: Cloudinary Photo Storage API, GoogleMaps API, FourSquare API</li>
+                                                <li>iOS App Store: <a href ="https://itunes.apple.com/app/id1144008173">https://itunes.apple.com/app/id1144008173</a> </li>
+                                                <li>Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.meteor.pintag"> https://play.google.com/store/apps/details?id=com.meteor.pintag </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div class="li-sep"></div>
+                                <li>
+                                    <div class="b-item">
+                                        <div class="b-item-img">
+                                            <img src="img/boeing.jpg">
+                                        </div>
+                                        <div class="b-item-content">
+                                            <h5><b><span class="blue-grey">June 2013 - August 2013</span></b></h5>
+                                            <h5 class="b-item-title"><b>Summer Engineering Intern - The Boeing Company</b></h5>
+                                            <h5>Huntington Beach, CA - USA</h5>
+                                            <ul>
+                                                <li>Worked under the mentorship of Chief Industrial Engineer, Mark Kazprsak in the additive manufacturing department.</li>
+                                                <li>Studied Computer Assisted Design software, CATIA, to replicate a 1:1000 scale of Boeing's X37 Space Shuttle. </li>
+                                                <li>Tackled "Robohand" project whose goal was to design a prosthetic hand via 3D printing. Focused on providing
+                                                a solution to the birth defect, Amniotic Band Syndrome. Details can be found <a href = "http://www.thingiverse.com/thing:92937">here.</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <hr>
+                        </div>
+                    </div> <!-- #Experience -->
+                    </div>
+
+                    <!-- Projects -->
+                    <div class="page-section" id="proj">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Notable Projects</h4>
+                                <h5 style="margin-bottom:5px;"><b><a href="https://github.com/geoprism/Twitter-IBMWatson-Analyzer">Twitter/IBM Watson Tone Analyzer </a></b></h5>
+                                <h5 style="margin-bottom:5px;"><b><a href="https://github.com/geoprism/Cars.com-webscraper">Webscraper of Cars.com</a></b></h5>
+                                <h5 style="margin-bottom:5px;"><b><a href="https://github.com/geoprism/Classic-Helicopter-Game">iOS Classic Helicopter Game</a></b></h5>
+                                <h5 style="margin-bottom:5px;"><b><a href="https://github.com/geoprism/webcrawler">Web Crawler (Distributed Framework)</a></b></h5>
+                            <hr>
+                        </div>
+                    </div> <!-- #Projects -->
+                    </div>
+
+                    <!-- AWARDS -->
+                    <div class="page-section" id="awards">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Awards</h4>
+                            <ul>
+                                <li>
+                                    <div class="b-item">
+                                        <div class="b-item-img">
+                                            <img src="img/uci_icon.jpg">
+                                        </div>
+                                        <div class="b-item-content">
+                                            <h5><b><span class="blue-grey">September 2014 - Present</span></b></h5>
+                                            <h5 class="b-item-title"><b>Dean’s Honor List</b></h5>
+                                            <h5>Irvine, CA - USA</h5>
+                                            <p>Placed on the Engineering Dean’s Honour List for all undergraduate quarters.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div class="li-sep"></div>
+                                <li>
+                                    <div class="b-item">
+                                        <div class="b-item-img">
+                                            <img src="img/uci_icon.jpg">
+                                        </div>
+                                        <div class="b-item-content">
+                                            <h5><b><span class="blue-grey">September 2016</span></b></h5>
+                                            <h5 class="b-item-title"><b>UFCW Merit-Based Scholarship</b></h5>
+                                            <h5>Irvine, CA - USA</h5>
+                                            <p>Awarded $7500 due to my outstanding academic achievement at UCI.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <hr>
+                        </div>
+                    </div> <!-- #Awards -->
+                    </div>
 
 
-</body>
+
+
+                    <div class="row" id="footer">
+                        <div class="col-md-12 text-center">
+                            <p class="copyright-text">Copyright &copy; 2017 Brian Wong</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/min/plugins.min.js"></script>
+        <script src="js/min/main.min.js"></script>
+
+    </body>
 </html>
